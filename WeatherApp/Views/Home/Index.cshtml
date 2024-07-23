@@ -1,0 +1,25 @@
+﻿@model WeatherApp.Models.WeatherData
+
+<div class="container">
+    <h1>Weather App</h1>
+    <form asp-action="GetWeather" method="post">
+        <div class="form-group">
+            <label for="city">Enter City:</label>
+            <input type="text" name="city" class="form-control" required />
+        </div>
+        <button type="submit" class="btn btn-primary">Get Weather</button>
+    </form>
+
+    @if (Model != null)
+    {
+        <div class="weather-info mt-4">
+            <h2>Weather in @ViewData["City"]</h2>
+            <p><strong>Description:</strong> @Model.Description</p>
+            <p><strong>Temperature:</strong> @Model.Temperature °C</p>
+            <p><strong>Feels Like:</strong> @Model.FeelsLike °C</p>
+            <p><strong>Minimum Temperature:</strong> @Model.MinTemp °C</p>
+            <p><strong>Maximum Temperature:</strong> @Model.MaxTemp °C</p>
+            <p><strong>Humidity:</strong> @Model.Humidity %</p>
+        </div>
+    }
+</div>
