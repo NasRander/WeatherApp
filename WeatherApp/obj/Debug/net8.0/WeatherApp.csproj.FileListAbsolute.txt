@@ -31,3 +31,4 @@ I:\Web Dev Projects\WeatherApp\WeatherApp\obj\Debug\net8.0\refint\WeatherApp.dll
 I:\Web Dev Projects\WeatherApp\WeatherApp\obj\Debug\net8.0\WeatherApp.pdb
 I:\Web Dev Projects\WeatherApp\WeatherApp\obj\Debug\net8.0\WeatherApp.genruntimeconfig.cache
 I:\Web Dev Projects\WeatherApp\WeatherApp\obj\Debug\net8.0\ref\WeatherApp.dll
+I:\Web Dev Projects\WeatherApp\WeatherApp\obj\Debug\net8.0\WeatherApp.sourcelink.json

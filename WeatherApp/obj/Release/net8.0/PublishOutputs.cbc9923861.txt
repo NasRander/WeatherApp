@@ -1,0 +1,8 @@
+I:\Web Dev Projects\WeatherApp\WeatherApp\obj\Release\net8.0\PubTmp\Out\WeatherApp.exe
+I:\Web Dev Projects\WeatherApp\WeatherApp\obj\Release\net8.0\PubTmp\Out\appsettings.Development.json
+I:\Web Dev Projects\WeatherApp\WeatherApp\obj\Release\net8.0\PubTmp\Out\appsettings.json
+I:\Web Dev Projects\WeatherApp\WeatherApp\obj\Release\net8.0\PubTmp\Out\WeatherApp.dll
+I:\Web Dev Projects\WeatherApp\WeatherApp\obj\Release\net8.0\PubTmp\Out\WeatherApp.deps.json
+I:\Web Dev Projects\WeatherApp\WeatherApp\obj\Release\net8.0\PubTmp\Out\WeatherApp.runtimeconfig.json
+I:\Web Dev Projects\WeatherApp\WeatherApp\obj\Release\net8.0\PubTmp\Out\WeatherApp.pdb
+I:\Web Dev Projects\WeatherApp\WeatherApp\obj\Release\net8.0\PubTmp\Out\Newtonsoft.Json.dll

@@ -20,8 +20,24 @@ namespace WeatherApp.Services
         {
             string url = $"https://api.openweathermap.org/data/2.5/weather?q={city}&appid={ApiKey}&units=metric";
 
-            HttpResponseMessage response = await _httpClient.GetAsync(url);
-            response.EnsureSuccessStatusCode();
+            HttpResponseMessage response;
+
+            try
+            {
+                response = await _httpClient.GetAsync(url);
+                response.EnsureSuccessStatusCode();
+            }
+            catch(HttpRequestException ex)
+            {
+                if (ex.Message.Contains("404"))
+                {
+                    throw new Exception("City not found");
+                }
+                else
+                {
+                    throw new Exception("An error occurred while fetching the weather data");
+                }
+            }
 
             string responseBody = await response.Content.ReadAsStringAsync();
             var json = JObject.Parse(responseBody);

@@ -7,14 +7,8 @@ namespace WeatherApp.Controllers
 {
     public class HomeController : Controller
     {
-        //private readonly ILogger<HomeController> _logger;
         private readonly WeatherService _weatherService;
 
-
-        //public HomeController(ILogger<HomeController> logger)
-        //{
-        //    _logger = logger;
-        //}
         public HomeController(WeatherService weatherService)
         {
             _weatherService = weatherService;
@@ -25,7 +19,7 @@ namespace WeatherApp.Controllers
             return View();
         }
 
-        public IActionResult Privacy()
+        public IActionResult About()
         {
             return View();
         }
@@ -38,8 +32,16 @@ namespace WeatherApp.Controllers
 
         public async Task<IActionResult> GetWeather(string city)
         {
-            var weatherData = await _weatherService.GetWeatherAsync(city);
-            ViewData["City"] = city;
+            WeatherData weatherData = null;
+            try
+            {
+                weatherData = await _weatherService.GetWeatherAsync(city);
+                ViewData["City"] = city;
+            }
+            catch (Exception ex)
+            {
+                ViewBag.ErrorMessage = ex.Message;
+            }
             return View("Index", weatherData);
 
         }

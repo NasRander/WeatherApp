@@ -1,7 +1,7 @@
 ﻿@model WeatherApp.Models.WeatherData
 
 <div class="container">
-    <h1>Weather App</h1>
+    <h1>ClimaticView</h1>
     <form asp-action="GetWeather" method="post">
         <div class="form-group">
             <label for="city">Enter City:</label>
@@ -9,6 +9,13 @@
         </div>
         <button type="submit" class="btn btn-primary">Get Weather</button>
     </form>
+
+    @if(ViewBag.ErrorMessage != null)
+    {
+        <div class="alert alert-danger mt-4">
+            @ViewBag.ErrorMessage
+        </div>
+    }
 
     @if (Model != null)
     {
